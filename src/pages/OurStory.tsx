@@ -55,25 +55,7 @@ const values = [
   desc: 'نبني مجتمعاً من محبي القهوة من خلال ورش العمل والفعاليات المتخصصة.'
 }];
 
-const team = [
-{
-  name: 'أحمد الحربي',
-  role: 'المؤسس والرئيس التنفيذي',
-  image:
-  '/images/saudi-gahwa.png'
-},
-{
-  name: 'سارة المالكي',
-  role: 'رئيسة قسم التحميص',
-  image:
-  '/images/finjaan-set.png'
-},
-{
-  name: 'خالد العمري',
-  role: 'خبير جودة القهوة Q-Grader',
-  image:
-  '/images/classic-arabic.png'
-}];
+
 
 export function OurStory() {
   return (
@@ -319,71 +301,7 @@ export function OurStory() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 bg-warm-beige/30">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <div className="text-center mb-14">
-            <motion.h2
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              className="font-amiri text-4xl text-deep-brown">
-              
-              فريق <span className="text-gold">العمل</span>
-            </motion.h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {team.map((member, i) =>
-            <motion.div
-              key={i}
-              initial={{
-                opacity: 0,
-                y: 25
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              transition={{
-                delay: i * 0.12
-              }}
-              className={`group text-center ${i === 1 ? 'sm:-mt-6' : ''}`}>
-              
-                <div
-                className="relative overflow-hidden h-[320px] mb-5 shadow-layered"
-                style={{
-                  borderRadius: '2px 30% 2px 25%'
-                }}>
-                
-                  <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                
-                  <div className="absolute inset-0 bg-gradient-to-t from-espresso/50 via-transparent to-transparent" />
-                </div>
-                <h3 className="font-amiri text-xl text-deep-brown group-hover:text-gold transition-colors">
-                  {member.name}
-                </h3>
-                <p className="font-cairo text-xs text-gold/70 mt-1">
-                  {member.role}
-                </p>
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </section>
+    
     </main>);
 
 }
